@@ -7,6 +7,10 @@ As of writing, Noyabot can:
 - Robust dice roll command with math expressions
 - Filter trackers from URLs, using self-updating AdGuard lists, entropy calculation, and custom precision
 
+## Bot Invite
+Use the live version here! -> [Invite Noyabot](https://discord.com/oauth2/authorize?client_id=1389044729467113594)<br/>
+...or join the [discord server](https://discord.gg/Ggrtu5nRfg)!
+
 ## How to install:
 ### Docker (recommended)
 1. Clone the repo
@@ -16,7 +20,7 @@ As of writing, Noyabot can:
 |:---------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
 | PROD_TOKEN           | The main discord bot token, this is required to run.                                                                                                             |   True    |
 | ERROR_LOG_CHANNEL_ID | Private channel ID where Noyabot posts errors. If you get any errors, please report a new issue.                                                                 |   True    |
-| URL_LOG_CHANNEL_ID   | Private channel ID where Noyabot posts unfiltered URL's when trying to sanitize them.                                                                            |   True    |
+| URL_LOG_CHANNEL_ID   | Private channel ID where Noyabot posts unfiltered URLs when trying to sanitize them.                                                                            |   True    |
 | DEV_TOKEN            | You can use an additional bot token for development or testing. Won't run even if present unless explicitly set, such as through an IDE's environment variables. |   False   |
 
 3. Create a data folder for Noyabot to store and access<br/>
