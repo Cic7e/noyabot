@@ -12,12 +12,13 @@ As of writing, Noyabot can:
 1. Clone the repo
 2. Create an .env file at the root with the following parameters:
 
-| Param                | Description                                                                                                                                                      | Required? |
-|:---------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| PROD_TOKEN           | The main discord bot token, this is required to run.                                                                                                             |   True    |
-| ERROR_LOG_CHANNEL_ID | Private channel ID where Noyabot posts errors. If you get any errors, please report a new issue.                                                                 |   True    |
-| URL_LOG_CHANNEL_ID   | Private channel ID where Noyabot posts unfiltered URL's when trying to sanitize them.                                                                            |   True    |
-| DEV_TOKEN            | You can use an additional bot token for development or testing. Won't run even if present unless explicitly set, such as through an IDE's environment variables. |   False   |
+| Param                | Description                                                                                                                                  | Required? |
+|:---------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| PROD_TOKEN           | The main discord bot token, this is required to run.                                                                                         |   True    |
+| ERROR_LOG_CHANNEL_ID | Private channel ID where Noyabot posts errors. If you get any errors, please report a new issue.                                             |   True    |
+| URL_LOG_CHANNEL_ID   | Private channel ID where Noyabot posts unfiltered URL's when trying to sanitize them.                                                        |   True    |
+| DEV_TOKEN            | You can use an additional bot token for development or testing. Won't run even if present unless explicitly set with ENVIRONMENT=development |   False   |
+| ENVIRONMENT          | Required to be set to 'development' if using with DEV_TOKEN. Any other input will run the PROD_TOKEN                                         |   False   |
 
 3. Create a data folder for Noyabot to store and access<br/>
 Edit `docker-compose.yml` to set the volume to your created data directory. The default is ('`/mnt/cache/appdata/noyabot`') which is ideal for an Unraid server, this must be changed to the location of your directory. If set properly, when the bot is first started it should immediately populate with fresh database files

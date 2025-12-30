@@ -111,7 +111,7 @@ class CleanerCog(commands.Cog):
             embed.set_footer(text=f"Feedback from: {triggered_by.name}", icon_url=triggered_by.display_avatar.url)
         await channel.send(embed=embed)
 
-    @commands.message_command(name="Clean URLs", integration_types={discord.IntegrationType.guild_install,
+    @commands.message_command(name="Remove URL trackers", integration_types={discord.IntegrationType.guild_install,
                                                                     discord.IntegrationType.user_install})
     async def clean_urls(self, ctx: discord.ApplicationContext, message: discord.Message):
         ephemeral = True if ctx.guild else False
