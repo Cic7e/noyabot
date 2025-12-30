@@ -40,8 +40,8 @@ async def setup():
     except Exception as e:
         print(f"An error occurred during rule update: {e}")
     try:
-        bot.load_extensions('cogs', recursive=True)
-        print("Loading cogs...")
+        bot.load_extensions('commands', recursive=True)
+        print("Loading commands...")
     except Exception as e:
         print(f"Failed to load extensions: {e}")
     try:
